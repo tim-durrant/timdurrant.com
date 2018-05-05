@@ -28,14 +28,14 @@
 		-o-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		border-bottom: solid 1px #e4e4e4;
+		border-bottom: solid 3px #e4e4e4;
 		color: inherit;
 		text-decoration: none;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #4acaa8 !important;
+			color: #ca805a !important;
 		}
 
 	strong, b {
@@ -156,7 +156,11 @@
 
     .float-right {
         float: right;
-    }
+	}
+	
+	.inline-block {
+		display:inline-block;
+	}
 
     .clear {
         clear: both;
@@ -195,7 +199,7 @@
 	}
 
 	header.major h2 {
-		color: #4acaa8;
+		color: #ca805a;
 		font-size: 3.5em;
 	}
 
@@ -259,7 +263,7 @@
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #4acaa8;
+			border-color: #ca805a;
 		}
 
 	.select-wrapper {
@@ -370,7 +374,7 @@
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #4acaa8;
+			border-color: #ca805a;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -562,7 +566,7 @@
 				}
 
 				ul.feature-icons li:before {
-					background: #4acaa8;
+					background: #ca805a;
 					border-radius: 100%;
 					color: #ffffff;
 					display: block;
@@ -851,7 +855,7 @@
 		input[type="reset"].special,
 		input[type="button"].special,
 		.button.special {
-			background-color: #4acaa8;
+			background-color: #ca805a;
 			color: #ffffff !important;
 		}
 
@@ -980,7 +984,7 @@
 			#header > header p {
 				color: #f1debd;
 				font-style: italic;
-				margin: 1em 0 0 0;
+				margin: 1em 2em 0 2em;
 			}
 
 		#header > footer {
@@ -1026,7 +1030,7 @@
 
 					#header > nav ul li a.active, #header > nav ul li .cc-active {
 						background: #fff;
-						color: #4acaa8 !important;
+						color: #ca805a !important;
 					}
 
 				#header > nav ul li:first-child {
@@ -1057,7 +1061,6 @@
 /* One */
 
 	#one:before {
-		background-image: url("../images/banner.jpg");
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -1073,8 +1076,8 @@
 		background: #fafafa;
 		border-top: 0;
 		color: #c0c0c0;
-		overflow: hidden;
 		padding: 4em 0 2em 0;
+		margin-top:15px;
 	}
 
 		#footer .copyright {
