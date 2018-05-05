@@ -1,0 +1,17 @@
+# Site settings
+title: Tim Durrant
+email: your-email@domain.com
+description:
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://timdurrant.com" # the base hostname & protocol for your site
+twitter_username: tim_durrant
+facebook_username: timjohndurrant
+instagram_username: 
+github_username: tim-durrant 
+email: tim.j.durrant@gmail.com
+name: Tim Durrant
+blurb: Awesome marketing guru, author and developer
+
+# Build settings
+markdown: kramdown
+host: sites.timdurrant.com
