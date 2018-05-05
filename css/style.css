@@ -1062,7 +1062,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		content: '';
-		display: block;
+		display: none;
 		height: 15em;
 		width: 100%;
 	}
