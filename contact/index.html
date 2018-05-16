@@ -6,8 +6,9 @@ layout: default
 <section id="one">
     <div class="container">
         <h3>Contact Me</h3>
-        <p>Please feel free to get in touch and let me know how I can help you.</p>
-        <form method="post" action="#">
+        <p id="Msg">Please feel free to get in touch and let me know how I can help you.</p>
+          <form id="contact-form">
+            <input type="hidden" name="_next" value="/contact-thanks" />
             <div class="row uniform">
                 <div class="6u 12u(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
                 <div class="6u 12u(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
@@ -28,4 +29,32 @@ layout: default
             </div>
         </form>
     </div>
+    <script>
+    var URL = 'https://hjp1e2cddb.execute-api.us-east-1.amazonaws.com/test/'
+ 
+        $('#contact-form').submit(function (event) {
+          event.preventDefault()
+         
+          var data = {
+            name: $('#name').val(),
+            email: $('#email').val(),
+            description: $('#message').val()
+          }
+         
+          $.ajax({
+            type: 'POST',
+            url: URL,
+            dataType: 'json',
+            contentType: 'application/json',
+            data: JSON.stringify(data),
+            success: function () {
+              $('#contact-form').display('none');
+              $('#Msg').text("Thanks! I'll be in touch shortly.");
+            },
+            error: function () {
+                $('#Msg').text("Sorry, there was an error sending your message.");
+            }
+          })
+        })
+    </script>
 </section>
