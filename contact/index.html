@@ -5,8 +5,8 @@ layout: default
 
 <section id="one">
     <div class="container">
-        <h3>Contact Me</h3>
-        <p id="Msg">Please feel free to get in touch and let me know how I can help you.</p>
+        <h3 id="contact-title">Contact Me</h3>
+        <p id="contact-subtitle">Please feel free to get in touch and let me know how I can help you.</p>
           <form id="contact-form">
             <input type="hidden" name="_next" value="/contact-thanks" />
             <div class="row uniform">
@@ -48,11 +48,14 @@ layout: default
             contentType: 'application/json',
             data: JSON.stringify(data),
             success: function () {
-              $('#contact-form').display('none');
-              $('#Msg').text("Thanks! I'll be in touch shortly.");
+              $('#contact-form').hide();
+              $('#contact-title').text("Thanks for the message!");
+              $('#contact-subtitle').text("I'll be in touch shortly.");
             },
             error: function () {
-                $('#Msg').text("Sorry, there was an error sending your message.");
+                $('#contact-form').hide();
+                $('#contact-title').text("Oops.");
+                $('#contact-subtitle').text("Sorry, there was an error sending your message.");
             }
           })
         })
