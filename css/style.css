@@ -216,6 +216,11 @@
 		margin: 0 0 2.25em 0;
 	}
 
+	.g-recaptcha {
+		padding-top:5px;
+		padding-bottom:5px;
+	}
+
 	label {
 		color: #777;
 		display: block;
