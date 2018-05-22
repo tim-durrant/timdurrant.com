@@ -38,7 +38,7 @@ layout: default
             name: $('#name').val(),
             email: $('#email').val(),
             description: $('#message').val(),
-            'g-recaptcha-response': $('.g-recaptcha').val()
+            'g-recaptcha-response': grecaptcha.getResponse()
           }
          
           $.ajax({
