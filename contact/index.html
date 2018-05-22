@@ -34,11 +34,21 @@ layout: default
         $('#contact-form').submit(function (event) {
           event.preventDefault()
          
+          var grecaptcha_response = grecaptcha.getResponse();
+
+          if (!grecaptcha_response || 0 === grecaptcha_response.length) {
+              $('.g-recaptcha').attr('title', 'Please prove you are not a robot.');
+              return;
+          }
+          else {
+            $('.g-recaptcha').attr('title', '');
+          }
+
           var data = {
             name: $('#name').val(),
             email: $('#email').val(),
             description: $('#message').val(),
-            'g-recaptcha-response': grecaptcha.getResponse()
+            'g-recaptcha-response': grecaptcha_response
           }
          
           $.ajax({
