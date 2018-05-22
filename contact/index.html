@@ -37,7 +37,8 @@ layout: default
           var data = {
             name: $('#name').val(),
             email: $('#email').val(),
-            description: $('#message').val()
+            description: $('#message').val(),
+            'g-recaptcha-response': $('.g-recaptcha').val()
           }
          
           $.ajax({
