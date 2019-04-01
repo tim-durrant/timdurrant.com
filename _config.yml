@@ -1,19 +1,24 @@
-# Site settings
+---
 title: Tim Durrant
-email: your-email@domain.com
-description:
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://timdurrant.com" # the base hostname & protocol for your site
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+email: tim.j.durrant@gmail.com
+description: 
+baseurl: ''
+url: https://timdurrant.com
 twitter_username: tim_durrant
 facebook_username: timjohndurrant
 instagram_username: 
-github_username: tim-durrant 
+github_username: tim-durrant
 linkedin_username: timdurrant
 telegram_username: tim_durrant
-email: tim.j.durrant@gmail.com
 name: Tim Durrant
 blurb: Dad, DIYer, Mac convert [Blogger, author & web dev]
-
-# Build settings
 markdown: kramdown
 host: sites.timdurrant.com
